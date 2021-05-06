@@ -1,4 +1,3 @@
-js
 $('.sliders').slick({
     dots: true,
     speed: 300,
@@ -23,20 +22,8 @@ $(document).ready(function() {
     });
 });
 
-const acessoSlide = () => {
-    const burguer = document.querySelector('.burguer');
-    const header = document.querySelector('.acesso');
-    const acesso = document.querySelectorAll('.acesso a');
-
-
-    burguer.addEventListener('click', () => {
-        header.classList.toggle('acesso-active');
-
-    });
-    acesso.forEach((link, index) => {
-        link.style.animation = 'acessoLinkFade 0.5s ease forwards ${index/7 + 1}s';
-
-    });
-    burguer.classList.toggle('toggle');
-}
-acessoSlide();
+$(document).ready(function() {
+    $('.menu').click(function() {
+        $('ul').toggleClass('active ');
+    })
+})
